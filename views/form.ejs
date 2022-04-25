@@ -1,0 +1,43 @@
+<html lang="en" class="theme-light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+
+<body>
+  <center>
+    <div class="content">
+        <h3 class="back"><a href="/"><%-text[11].text%></a></h3>
+        <br>
+      <div class="title">
+        <h1><%-text[0].text%></h1>
+        <h2><%-text[1].text%></h2>
+        <h2><strong><%-text[2].text%></strong></h2>
+      </div>
+      <input type="text " name="name" id=" " placeholder="<%-text[3].text%>" required="">
+      <input type="text " name="name" id=" " placeholder="<%-text[4].text%>" required="">
+      <select class="aus" name="aus" required="" oninvalid=" $(this).css('border', '1px solid red');">
+        <option value="" selected="" disabled=""><%-text[5].text%></option>
+        <option value="S">S</option>
+        <option value="SP">Sans Papier</option>
+        <option value="L">L</option>
+        <option value="N">N</option>
+        <option value="F">F</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="CH">CH</option>
+      </select>      
+      <input type="text " name="name" id=" " placeholder="<%-text[6].text%>" required="">
+      <input type="text " name="name" id=" " placeholder="<%-text[7].text%>" required="">
+      <p><%-text[8].text%></p>
+      <input type="date " name="name" id=" " placeholder="<%-text[9].text%>" required="">
+      <input type="submit" class="delete big btn_nodata sub" value="<%-text[10].text%>" name="search">
+    </div>
+  </center>
+</body>
+
+</html>
