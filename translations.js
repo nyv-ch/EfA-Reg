@@ -13,7 +13,7 @@ exports.form = [{
     { order: 11, text:"Zurück"},],
     en: [
         { order: 0, text: 'Food for everyone' },
-        { order: 1, text: 'Pre-reigstration' },
+        { order: 1, text: 'Pre-registration' },
         { order: 2, text: 'Please use the Latin alphabet' },
         { order: 3, text: 'Your name' },
         { order: 4, text: 'Your phone number' },

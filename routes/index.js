@@ -3,6 +3,7 @@ const res = require("express/lib/response");
 var router = express.Router();
 const translatte = require("translatte");
 const { form } = require("../translations");
+const jwt = require('jsonwebtoken')
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -28,6 +29,12 @@ router.get("/form", function (req, res, next) {
   if (!lang_array.includes(lang)) return res.redirect("/");
   return res.render("form", { text: form[0][lang] });
 });
+
+router.post('/qr', function(req, res, next){
+  var data = req.body;
+  const token = jwt.sign(data, process.env.jwt_secret, {expiresIn: '5h'})
+  return res.render('/qr', {jwt: token})
+})
 
 module.exports = router;
 

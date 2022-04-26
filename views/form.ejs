@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Essen für Alle</title>
+  <link rel="shortcut icon" href="https://system.essenfueralle.org/essenlogo.jpg">
   <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
 
@@ -18,7 +19,8 @@
         <h2><%-text[1].text%></h2>
         <h2><strong><%-text[2].text%></strong></h2>
       </div>
-      <input type="text " name="name" id=" " placeholder="<%-text[3].text%>" required="">
+      <form action="/qr" method="post">
+      <input type="text " pattern="[a-zA-Z]*" oninvalid="<%-text[2].text%>" name="name" id=" " placeholder="<%-text[3].text%>" required="">
       <input type="text " name="name" id=" " placeholder="<%-text[4].text%>" required="">
       <select class="aus" name="aus" required="" oninvalid=" $(this).css('border', '1px solid red');">
         <option value="" selected="" disabled=""><%-text[5].text%></option>
@@ -36,6 +38,7 @@
       <p><%-text[8].text%></p>
       <input type="date " name="name" id=" " placeholder="<%-text[9].text%>" required="">
       <input type="submit" class="delete big btn_nodata sub" value="<%-text[10].text%>" name="search">
+    </form>
     </div>
   </center>
 </body>
