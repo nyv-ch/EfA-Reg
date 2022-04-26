@@ -4,6 +4,7 @@ var router = express.Router();
 const translatte = require("translatte");
 const { form } = require("../translations");
 const jwt = require('jsonwebtoken')
+require("dotenv").config();
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
