@@ -4,9 +4,13 @@
   outline: none;
 }
 body{
+  background-color: whitesmoke;
   margin: 0px;
 }
+
 .content {
+  margin-top: 0px;
+  min-height: 100vh;
   background-color: whitesmoke;
 }
 
@@ -61,6 +65,25 @@ select {
 }
 ::placeholder {
   color: black;
+}
+
+.house{
+  margin-bottom: 1%;
+}
+
+.qr_container img{
+  image-rendering: pixelated;
+  width: 100%;
+}
+
+.qr_container{
+  padding: 2%;
+  border: 10px solid #912F77;
+  width: 75%;
+}
+
+.house_p{
+  margin-bottom: 2%;
 }
 
 input:focus,

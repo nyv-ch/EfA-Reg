@@ -3,8 +3,19 @@ const res = require("express/lib/response");
 var router = express.Router();
 const translatte = require("translatte");
 const { form } = require("../translations");
-const jwt = require('jsonwebtoken')
 require("dotenv").config();
+var mysql = require('mysql2');
+
+
+var db = mysql.createConnection({
+  connectionLimit: 500,
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.db,
+  port: process.env.portt,
+  insecureAuth: true
+});
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -32,9 +43,14 @@ router.get("/form", function (req, res, next) {
 });
 
 router.post('/qr', function(req, res, next){
-  var data = req.body;
-  const token = jwt.sign(data, process.env.jwt_secret, {expiresIn: '5h'})
-  return res.render('/qr', {jwt: token})
+  var name = req.body.name;
+  var data = Buffer.from(JSON.stringify(req.body)).toString('base64');
+  //decode
+  //Buffer.from("SGVsbG8gV29ybGQ=", 'base64').toString('ascii')
+  db.query("INSERT INTO pre_reg (data) VALUES (?)", [data], function (error, results, fields) {
+    console.log(results)
+  return res.render('qr', {jwt: results.insertId, name: name})
+    })
 })
 
 module.exports = router;

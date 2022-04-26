@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,27 @@
     <title>Essen für Alle</title>
     <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
+
 <body>
     <center>
-    <div class="content">
-        <div class="qr_container">
-
+        <div class="content">
+            <div class="title">
+                <h1>Essen für Alle</h1>
+          <h2>Vorregistration</h2>
         </div>
-    </div>
-</center>
+            <div class="qr_container">
+            </div>
+            <h1><%=name%></h1>
+        </div>
+    </center>
 </body>
+
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-     new QRCode(document.querySelector(".qr_container"), <%-jwt%>);
+    var qrcode = new QRCode(document.querySelector(".qr_container"), {
+        text: "<%=jwt%>",
+        padding: 2,
+        correctLevel: QRCode.CorrectLevel.L
+    });
 </script>

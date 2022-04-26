@@ -20,8 +20,8 @@
         <h2><strong><%-text[2].text%></strong></h2>
       </div>
       <form action="/qr" method="post">
-      <input type="text " pattern="[a-zA-Z]*" oninvalid="<%-text[2].text%>" name="name" id=" " placeholder="<%-text[3].text%>" required="">
-      <input type="text " name="name" id=" " placeholder="<%-text[4].text%>" required="">
+      <input type="text"  oninvalid="<%-text[2].text%>" name="name" id=" " placeholder="<%-text[3].text%>" required="">
+      <input type="number" name="phone" id=" " placeholder="<%-text[4].text%>" required="">
       <select class="aus" name="aus" required="" oninvalid=" $(this).css('border', '1px solid red');">
         <option value="" selected="" disabled=""><%-text[5].text%></option>
         <option value="S">S</option>
@@ -33,10 +33,10 @@
         <option value="C">C</option>
         <option value="CH">CH</option>
       </select>      
-      <input type="text " name="name" id=" " placeholder="<%-text[6].text%>" required="">
-      <input type="text " name="name" id=" " placeholder="<%-text[7].text%>" required="">
-      <p><%-text[8].text%></p>
-      <input type="date " name="name" id=" " placeholder="<%-text[9].text%>" required="">
+      <input type="number" name="people" id=" " placeholder="<%-text[6].text%>" required="">
+      <input type="text" name="house" class="house" id=" " placeholder="<%-text[7].text%>" required="">
+      <p class="house_p"><%-text[8].text%></p>
+      <input type="date" name="birthday" id=" " placeholder="<%-text[9].text%>" required="">
       <input type="submit" class="delete big btn_nodata sub" value="<%-text[10].text%>" name="search">
     </form>
     </div>
