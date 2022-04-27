@@ -89,8 +89,18 @@ select {
 input:focus,
 select:focus {
   border-color: #912F77;
-  
 }
+
+input[type=date] {
+  text-align: right;
+}
+
+input[type="date"]:before {
+  color: black;
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+}
+
 
 input[type="submit"],
 button[type="submit"] {
