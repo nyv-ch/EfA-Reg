@@ -48,7 +48,6 @@ router.post('/qr', function(req, res, next){
   //decode
   //Buffer.from("SGVsbG8gV29ybGQ=", 'base64').toString('ascii')
   db.query("INSERT INTO pre_reg (data) VALUES (?)", [data], function (error, results, fields) {
-    console.log(results)
   return res.render('qr', {jwt: results.insertId, name: name})
     })
 })
