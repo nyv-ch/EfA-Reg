@@ -5,6 +5,7 @@ const translatte = require("translatte");
 const { form } = require("../translations");
 require("dotenv").config();
 var mysql = require('mysql2');
+const { all_plz } = require("../plz_schweiz");
 
 
 var db = mysql.createConnection({
@@ -43,14 +44,23 @@ router.get("/form", function (req, res, next) {
 });
 
 router.post('/qr', function(req, res, next){
+  var success = false
+  all_plz.forEach(element => {
+    if(req.body.house == element.plz +" - "+element.ort + " - " +element.kanton) success = true;
+  });
+  if(success !== true)  return res.json({success: false, error: "addr"})
   var name = req.body.name;
   var data = Buffer.from(JSON.stringify(req.body)).toString('base64');
   //decode
   //Buffer.from("SGVsbG8gV29ybGQ=", 'base64').toString('ascii')
   db.query("INSERT INTO pre_reg (data) VALUES (?)", [data], function (error, results, fields) {
-  return res.render('qr', {jwt: results.insertId, name: name})
+  return res.json({success: false, jwt: results.insertId, name: name})
     })
 })
+
+router.get("/qr/:id", function (req, res, next) {
+  return res.render("qr", { jwt: req.params.id, name: req.query.name });
+});
 
 module.exports = router;
 

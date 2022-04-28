@@ -1,7 +1,7 @@
 exports.form = [{
     de: [{ order: 0, text: "Essen für Alle" },
     { order: 1, text: "Vorregistration"},
-    { order: 2, text:"Bitte benütze das Lateinische Alphabet"},
+    { order: 2, text:"Bitte benutze das Lateinische Alphabet"},
     { order: 3, text:"Dein Name"},
     { order: 4, text:"Deine Telefonnummer"},
     { order: 5, text:"Dein Aufenthaltsstatus"},
