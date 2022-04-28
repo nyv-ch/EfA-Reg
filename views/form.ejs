@@ -4204,11 +4204,7 @@
       url: '/qr',
       type: 'POST',
       cache: false,
-      data: {
-        id: id,
-        was: was,
-        allowed: allowed
-      },
+      data: $('form').serializeArray(),
       success: function (data) {
         if (data.success == true) {
           window.location = `/qr/${data.jwt}?name=${data.name}`;
