@@ -20,7 +20,7 @@
         <h2><%-text[1].text%></h2>
         <h2><strong><%-text[2].text%></strong></h2>
       </div>
-      <form action="/qr" method="post">
+      <form action="" method="post">
         <input type="text" oninvalid="<%-text[2].text%>" name="name" id=" " placeholder="<%-text[3].text%>" required=""
           oninvalid=" $(this).css('border', '2px solid red');">
         <input type="number" name="phone" id=" " placeholder="<%-text[4].text%>" required=""
@@ -4197,7 +4197,7 @@
     });
 
   }
-  $("#form").submit(function (e) {
+  $("form").submit(function (e) {
     e.preventDefault();
     $('.sub').css('display', 'none')
     $.ajax({
