@@ -28,7 +28,7 @@ router.all('/*', function(req, res, next){
   if (myDate.getDay() !== 6) {
     res.redirect("https://www.essenfueralle.org")
   }else{
-    if(myDate.getHours() < 9 || myDate.getHours() > 20){
+    if(myDate.getHours() < 9 || myDate.getHours() > 19){
       res.redirect("https://www.essenfueralle.org")
     }else{
       next()
