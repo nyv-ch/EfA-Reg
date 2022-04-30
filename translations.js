@@ -8,9 +8,12 @@ exports.form = [{
     { order: 6, text:"Mit wie vielen Personen lebst du?"},
     { order: 7, text:"Wo wohnst du?"},
     { order: 8, text:"Bitte wähle einen Ort aus der Liste aus"},
-    { order: 9, text:"Dein Geburtsdatum"},
+    { order: 9, text:"Dein Geschlecht"},
     { order: 10, text:"Absenden"},
-    { order: 11, text:"Zurück"},],
+    { order: 11, text:"Zurück"},
+  {order: 12, text:"Weiblich"},
+  {order: 12, text:"Männlich"},
+  {order: 12, text:"Anderes"}],
     en: [
         { order: 0, text: 'Food for everyone' },
         { order: 1, text: 'Pre-registration' },
@@ -21,9 +24,12 @@ exports.form = [{
         { order: 6, text: 'How many people do you live with?' },
         { order: 7, text: 'Where do you live?' },
         { order: 8, text: 'Please select a location from the list' },
-        { order: 9, text: 'Your date of birth' },
+        { order: 9, text: 'Your gender' },
         { order: 10, text: 'Send' },
-        { order: 11, text: 'Back' }
+        { order: 11, text: 'Back' },
+        {order: 12, text:"Female"},
+  {order: 12, text:"Male"},
+  {order: 12, text:"Other"}
       ],
       uk: [
         { order: 0, text: 'Їжа для всіх' },
@@ -35,9 +41,12 @@ exports.form = [{
         { order: 6, text: 'З якою кількістю людей ви живете (в тому числі і ви самі)?' },
         { order: 7, text: 'Де ти живеш?' },
         { order: 8, text: 'Будь ласка, виберіть розташування зі списку' },
-        { order: 9, text: 'Дата вашого народження' },
+        { order: 9, text: 'Ваша стать' },
         { order: 10, text: 'Розсилання' },
-        { order: 11, text: 'Задній' }
+        { order: 11, text: 'Задній' },
+        {order: 12, text:"жіночий"},
+        {order: 12, text:"Чоловічий"},
+        {order: 12, text:"Інший"}
       ],
       fr: [
         { order: 0, text: 'Nourriture pour tous' },
@@ -49,9 +58,12 @@ exports.form = [{
         { order: 6, text: 'Avec combien de personnes vivez-vous?' },
         { order: 7, text: 'Où habites-tu?' },
         { order: 8, text: 'Veuillez sélectionner un endroit dans la liste' },
-        { order: 9, text: 'Votre date de naissance' },
+        { order: 9, text: 'Votre sexe' },
         { order: 10, text: 'Envoyer' },
-        { order: 11, text: 'Retourner' }
+        { order: 11, text: 'Retourner' },
+        {order: 12, text:"Féminin"},
+        {order: 12, text:"Masculin"},
+        {order: 12, text:"Autre"}
       ],
       ku: [
         { order: 0, text: 'Xwarin ji bo her tiştî' },
@@ -63,9 +75,12 @@ exports.form = [{
         { order: 6, text: 'Hûn bi çend kesan re dijîn?' },
         { order: 7, text: 'Tu li ku dijî?' },
         { order: 8, text: 'Ji kerema xwe cîhek ji navnîşê hilbijêrin' },
-        { order: 9, text: 'Dîroka jidayikbûna we' },
+        { order: 9, text: 'zayenda te' },
         { order: 10, text: 'Şandin' },
-        { order: 11, text: 'Vegerr' }
+        { order: 11, text: 'Vegerr' },
+        {order: 12, text:"Mêtî"},
+        {order: 12, text:"Nêrî"},
+        {order: 12, text:"Yên din"}
       ],
       ar: [
         { order: 0, text: 'الطعام للجميع' },
@@ -77,9 +92,12 @@ exports.form = [{
         { order: 6, text: 'كم عدد الأشخاص الذين تعيش معهم؟' },
         { order: 7, text: 'أين تسكن؟' },
         { order: 8, text: 'الرجاء تحديد مكان من القائمة' },
-        { order: 9, text: 'تاريخ ميلادك' },
+        { order: 9, text: 'جنسك' },
         { order: 10, text: 'يرسل' },
-        { order: 11, text: 'يعود' }
+        { order: 11, text: 'يعود' },
+        {order: 12, text:"المؤنث"},
+        {order: 12, text:"ذكر"},
+        {order: 12, text:"آخر"}
       ],
       fa: [
         { order: 0, text: 'مواد غذایی برای همه' },
@@ -91,9 +109,12 @@ exports.form = [{
         { order: 6, text: 'با چند نفر زندگی میکنی (اعضای خانواده) ؟' },
         { order: 7, text: 'کجا زندگی میکنی ( محل اقامت) ؟' },
         { order: 8, text: 'لطفا یک مکان را از لیست انتخاب کن' },
-        { order: 9, text: 'تاریخ تولد تو'},
+        { order: 9, text: 'جنسیت شما'},
         { order: 10, text: 'فرستادن/ ارسال ' },
-        { order: 11, text: 'برگشت' }
+        { order: 11, text: 'برگشت' },
+        {order: 12, text:"زنانه"},
+        {order: 12, text:"نر"},
+        {order: 12, text:"دیگر"}
       ],
       es: [
         { order: 0, text: 'Comida para todos' },
@@ -105,9 +126,12 @@ exports.form = [{
         { order: 6, text: '¿Con cuántas personas vives?' },
         { order: 7, text: '¿Donde vives?' },
         { order: 8, text: 'Por favor seleccione un lugar de la lista' },
-        { order: 9, text: 'Tu fecha de nacimiento' },
+        { order: 9, text: 'Tu género' },
         { order: 10, text: 'Enviar' },
-        { order: 11, text: 'Volver' }
+        { order: 11, text: 'Volver' },
+        {order: 12, text:"Femenino"},
+        {order: 12, text:"Masculino"},
+        {order: 12, text:"Otro"}
       ]
 },
 ]
