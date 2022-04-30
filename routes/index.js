@@ -23,6 +23,18 @@ var db = mysql.createConnection({
   insecureAuth: true
 });
 
+router.all('/*', function(req, res, next){
+  var myDate = new Date();
+  if (myDate.getDay() !== 6) {
+    res.redirect("https://www.essenfueralle.org")
+  }else{
+    if(myDate.getHours() < 9 || myDate.getHours() > 20){
+      res.redirect("https://www.essenfueralle.org")
+    }else{
+      next()
+    }
+  };
+})
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", {
