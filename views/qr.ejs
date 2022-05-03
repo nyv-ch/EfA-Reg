@@ -15,21 +15,44 @@
         <div class="content">
             <div class="title">
                 <h1>Essen für Alle</h1>
-          <h2>Vorregistration</h2>
-        </div>
-            <div class="qr_container">
+                <h2>Vorregistration</h2>
             </div>
-            <h1><%=name%></h1>
+            <div class="qr_container">
+                <img src="" alt="" id="qr" class="qrimg">
+            </div>
+            <h1>
+                <%=name%>
+            </h1>
         </div>
     </center>
 </body>
 
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="/js/bwip-js-min.js"></script>
 <script>
-    var qrcode = new QRCode(document.querySelector(".qr_container"), {
-        text: "<%=jwt%>",
-        padding: 2,
-        correctLevel: QRCode.CorrectLevel.L
-    });
+    /* var qrcode = new QRCode(document.querySelector(".qr_container"), {
+         text: "<%=jwt%>",
+         padding: 2,
+         correctLevel: QRCode.CorrectLevel.L
+     });*/
+    let canvas = document.createElement('canvas');
+    try {
+        bwipjs.toCanvas(canvas, {
+            bcid: 'qrcode',       // Barcode type
+            text: "<%=jwt%>",    // Text to encode
+            scale: 6,
+            width: 10,
+            height: 10,
+            padding: 2,            // Bar height, in millimeters
+            includetext: false,            // Show human-readable text
+            textxalign: 'center',
+            backgroundcolor: "FFFFFF",
+            // Always good to set this
+        });
+        document.getElementById('qr').src = canvas.toDataURL('image/png');
+    } catch (e) {
+        // `e` may be a string or Error object
+        console.log(e)
+    }
 </script>
