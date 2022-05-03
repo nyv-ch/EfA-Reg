@@ -22,7 +22,7 @@ var db = mysql.createConnection({
   port: process.env.portt,
   insecureAuth: true
 });
-
+/*
 router.all('/*', function(req, res, next){
   var myDate = new Date();
   if (myDate.getDay() !== 6) {
@@ -34,7 +34,7 @@ router.all('/*', function(req, res, next){
       next()
     }
   };
-})
+})*/
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", {
@@ -82,13 +82,13 @@ router.post('/qr', function (req, res, next) {
   db.query("SELECT * FROM pre_reg WHERE data = ?;", [data], function (error, results, fields) {
     if (results.length > 0) return res.json({
       success: true,
-      jwt: results[0].id,
+      jwt: "pre_"+results[0].id,
       name: name
     })
     db.query("INSERT INTO pre_reg (data) VALUES (?)", [data], function (error, results, fields) {
       return res.json({
         success: true,
-        jwt: results.insertId,
+        jwt: "pre_"+results.insertId,
         name: name
       })
     })
