@@ -12,8 +12,9 @@ exports.form = [{
     { order: 10, text:"Absenden"},
     { order: 11, text:"Zurück"},
   {order: 12, text:"Weiblich"},
-  {order: 12, text:"Männlich"},
-  {order: 12, text:"Anderes"}],
+  {order: 13, text:"Männlich"},
+  {order: 14, text:"Anderes"},
+  {order: 15, text:"Diese Telefonnummer ist bereits registriert"}],
     en: [
         { order: 0, text: 'Food for everyone' },
         { order: 1, text: 'Pre-registration' },
@@ -29,7 +30,8 @@ exports.form = [{
         { order: 11, text: 'Back' },
         {order: 12, text:"Female"},
   {order: 12, text:"Male"},
-  {order: 12, text:"Other"}
+  {order: 12, text:"Other"},
+  {order: 15, text:"This phone number is already registered"},
       ],
       uk: [
         { order: 0, text: 'Їжа для всіх' },
@@ -45,8 +47,9 @@ exports.form = [{
         { order: 10, text: 'Розсилання' },
         { order: 11, text: 'Задній' },
         {order: 12, text:"жіночий"},
-        {order: 12, text:"Чоловічий"},
-        {order: 12, text:"Інший"}
+        {order: 13, text:"Чоловічий"},
+        {order: 14, text:"Інший"},
+        {order: 15, text:"Цей номер телефону вже зареєстровано"},
       ],
       fr: [
         { order: 0, text: 'Nourriture pour tous' },
@@ -63,7 +66,9 @@ exports.form = [{
         { order: 11, text: 'Retourner' },
         {order: 12, text:"Féminin"},
         {order: 12, text:"Masculin"},
-        {order: 12, text:"Autre"}
+        {order: 12, text:"Autre"},
+        {order: 15, text:"Ce numéro de téléphone est déjà enregistré"},
+
       ],
       ku: [
         { order: 0, text: 'Xwarin ji bo her tiştî' },
@@ -80,7 +85,9 @@ exports.form = [{
         { order: 11, text: 'Vegerr' },
         {order: 12, text:"Mêtî"},
         {order: 12, text:"Nêrî"},
-        {order: 12, text:"Yên din"}
+        {order: 12, text:"Yên din"},
+        {order: 15, text:"Ev jimara têlefonê jixwe qeydkirî ye"},
+
       ],
       ar: [
         { order: 0, text: 'الطعام للجميع' },
@@ -95,9 +102,11 @@ exports.form = [{
         { order: 9, text: 'جنسك' },
         { order: 10, text: 'يرسل' },
         { order: 11, text: 'يعود' },
-        {order: 12, text:"المؤنث"},
-        {order: 12, text:"ذكر"},
-        {order: 12, text:"آخر"}
+        {order: 12, text:"مونث"},
+        {order: 12, text:"مذکر"},
+        {order: 12, text:"آخر"},
+        {order: 15, text:"رقم الهاتف هذا مسجل بالفعل"},
+
       ],
       fa: [
         { order: 0, text: 'مواد غذایی برای همه' },
@@ -112,9 +121,11 @@ exports.form = [{
         { order: 9, text: 'جنسیت شما'},
         { order: 10, text: 'فرستادن/ ارسال ' },
         { order: 11, text: 'برگشت' },
-        {order: 12, text:"زنانه"},
-        {order: 12, text:"نر"},
-        {order: 12, text:"دیگر"}
+        {order: 12, text:"زن (مونث)"},
+        {order: 12, text:"مرد (مذکر)"},
+        {order: 12, text:"غیره"},
+        {order: 15, text:"این شماره تلفن قبلاً ثبت شده است"},
+
       ],
       es: [
         { order: 0, text: 'Comida para todos' },
@@ -131,7 +142,9 @@ exports.form = [{
         { order: 11, text: 'Volver' },
         {order: 12, text:"Femenino"},
         {order: 12, text:"Masculino"},
-        {order: 12, text:"Otro"}
+        {order: 12, text:"Otro"},
+        {order: 15, text:"Este número de teléfono ya está registrado"},
+
       ]
 },
 ]
