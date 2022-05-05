@@ -76,8 +76,7 @@ select {
   width: 100%;
 }
 
-.qr_container{
-  padding: 10px;
+#qr{
   border: 10px solid #912F77;
   width: 75%;
 }
