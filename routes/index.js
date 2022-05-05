@@ -85,13 +85,19 @@ router.post('/qr', function (req, res, next) {
       jwt: "pre_"+results[0].id,
       name: name
     })
-    db.query("INSERT INTO pre_reg (data) VALUES (?)", [data], function (error, results, fields) {
+    db.query("SELECT * FROM pre_reg WHERE tel = ?;", [req.body.phone], function (error, results, fields) {
+      if (results.length > 0) return res.json({
+        success: false,
+        error: "phone"
+      })
+    db.query("INSERT INTO pre_reg (data, tel) VALUES (?, ?)", [data, req.body.phone], function (error, results, fields) {
       return res.json({
         success: true,
         jwt: "pre_"+results.insertId,
         name: name
       })
     })
+  })
   })
 })
 

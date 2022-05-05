@@ -82,6 +82,10 @@ select {
   width: 75%;
 }
 
+.phone_msg{
+  margin-top: 0px;
+}
+
 .house_p{
   margin-bottom: 2%;
 }

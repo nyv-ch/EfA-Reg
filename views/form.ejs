@@ -23,8 +23,9 @@
       <form action="" method="post">
         <input type="text" oninvalid="<%-text[2].text%>" name="name" id=" " placeholder="<%-text[3].text%>" required=""
           oninvalid=" $(this).css('border', '2px solid red');">
-        <input type="number" name="phone" id=" " placeholder="<%-text[4].text%>" required=""
+        <input type="number" name="phone" id="phone" placeholder="<%-text[4].text%>" required=""
           oninvalid=" $(this).css('border', '2px solid red');">
+          <p class="phone_msg"></p>
         <select class="aus" name="aus" required="" oninvalid=" $(this).css('border', '2px solid red');">
           <option value="" selected="" disabled=""><%-text[5].text%></option>
           <option value="S">S</option>
@@ -4217,6 +4218,13 @@
           if (data.error == "addr") {
             $('.house_p').css('color', 'red')
             $('.house_p').css('font-size', '120%')
+          }
+          if (data.error == "phone") {
+            $('#phone').css("border-color", "red")
+            $('#phone').val("")
+            $('.phone_msg').html("<%-text[15].text%>")
+            $('.phone_msg').css('color', 'red')
+            $('.phone_msg').css('font-size', '120%')
           }
         }
       },
