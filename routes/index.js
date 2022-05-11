@@ -24,7 +24,7 @@ var db = mysql.createConnection({
 });
 
 router.all('/*', function(req, res, next){
-  var myDate = new Date();
+  var myDate = new Date();/*
   if (myDate.getDay() !== 6) {
     res.redirect("https://www.essenfueralle.org")
   }else{
@@ -33,7 +33,7 @@ router.all('/*', function(req, res, next){
     }else{
       next()
     }
-  };
+  };*/
 })
 /* GET home page. */
 router.get("/", function (req, res, next) {
