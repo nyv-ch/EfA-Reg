@@ -22,7 +22,7 @@ var db = mysql.createConnection({
   port: process.env.portt,
   insecureAuth: true
 });
-
+/*
 router.all('/*', function(req, res, next){
   var myDate = new Date();
   if (myDate.getDay() !== 6) {
@@ -35,6 +35,7 @@ router.all('/*', function(req, res, next){
     }
   };
 })
+*/
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", {
