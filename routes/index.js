@@ -68,6 +68,8 @@ router.get("/form", function (req, res, next) {
 });
 
 router.post('/qr', function (req, res, next) {
+  try {
+  
   var success = false
   all_plz.forEach(element => {
     if (req.body.house == element.plz + " - " + element.ort + " - " + element.kanton) success = true;
@@ -100,6 +102,10 @@ router.post('/qr', function (req, res, next) {
     })
   })
   })
+    
+} catch (error) {
+    console.log(error)
+}
 })
 
 router.get("/qr/:id", function (req, res, next) {
